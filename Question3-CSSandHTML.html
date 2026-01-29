@@ -30,13 +30,20 @@
 </head>
 
 <body>
-  <h1>HTML made Easy</h1>
+<h1>HTML made Easy</h1>
 
-  <p>What causes errors in HTML?</p>
-  
-  <button class="button">Submit answers</button>
+  <form>
+    <label for="answer">What causes errors in HTML?</label>
+
+    <textarea id="answer" name="answer" placeholder="Type your answer here..." required></textarea>
+
+    <button class="button" type="submit">Submit answer</button>
+  </form>
+
+  <p class="success">Answer submitted successfully.</p>
 </body>
 </html>
+
 
 
 
