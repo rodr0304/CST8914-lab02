@@ -17,10 +17,23 @@
       document.getElementById("demo").innerHTML = "Hello World";
     }
 
-    document.getElementById("actionBtn")
-      .addEventListener("mouseover", myFunction);
+    const btn = document.getElementById("actionBtn");
+
+    // Mouse users
+    btn.addEventListener("mouseover", myFunction);
+
+    // Keyboard users (TAB)
+    btn.addEventListener("focus", myFunction);
+
+    // Keyboard users (ENTER or SPACE)
+    btn.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        myFunction();
+      }
+    });
   </script>
-  <br><hr><br><a href="https://rodr0304.github.io/CST8914-lab02">Back to index page</a>
+
+  <br><hr><br>
+  <a href="https://rodr0304.github.io/CST8914-lab02">Back to index page</a>
 </body>
 </html>
-
